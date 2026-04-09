@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AnimateIn from "@/components/ui/AnimateIn";
+import { IconCheck, IconExternalLink } from "@/components/ui/Icons";
 import { IMAGES } from "@/lib/data";
 
 const APARTAMENTOS = [
@@ -119,7 +120,7 @@ export default function AlojamientosPage() {
                     <ul className="grid grid-cols-2 gap-2 mb-8">
                       {apt.destacados.map((d) => (
                         <li key={d} className="flex items-center gap-2 font-sans text-sm text-tierra dark:text-crema/80">
-                          <span className="text-musgo">✓</span>
+                          <span className="text-musgo shrink-0"><IconCheck className="w-3.5 h-3.5" /></span>
                           {d}
                         </li>
                       ))}
@@ -129,9 +130,10 @@ export default function AlojamientosPage() {
                         href="https://www.airbnb.es"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-fuego text-crema font-sans font-medium text-sm uppercase tracking-widest px-6 py-3 hover:bg-tierra transition-colors"
+                        className="inline-flex items-center gap-2 bg-fuego text-crema font-sans font-medium text-sm uppercase tracking-widest px-6 py-3 hover:bg-tierra transition-colors"
                       >
-                        Ver en Airbnb ↗
+                        Ver en Airbnb
+                        <IconExternalLink className="w-3.5 h-3.5" />
                       </a>
                     </div>
                   </div>

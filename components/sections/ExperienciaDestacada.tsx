@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AnimateIn from "@/components/ui/AnimateIn";
+import { IconPin, IconUsers, IconPrice, IconCalendar, IconStar } from "@/components/ui/Icons";
 import { IMAGES } from "@/lib/data";
 
 export default function ExperienciaDestacada() {
@@ -33,7 +34,7 @@ export default function ExperienciaDestacada() {
           animate={{ scale: [1, 1.03, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          ✦ Experiencia Estrella
+          <IconStar className="w-2.5 h-2.5 inline mr-1.5 -mt-px" />Experiencia Estrella
         </motion.div>
       </div>
 
@@ -54,13 +55,13 @@ export default function ExperienciaDestacada() {
           <AnimateIn delay={0.2}>
             <div className="flex flex-wrap gap-6 mb-10">
               {[
-                { icon: "📍", label: "Somiedo, Asturias" },
-                { icon: "👥", label: "8 plazas máx." },
-                { icon: "💰", label: "600€ / persona" },
-                { icon: "🗓️", label: "Fin de semana" },
+                { icon: <IconPin className="w-4 h-4" />, label: "Somiedo, Asturias" },
+                { icon: <IconUsers className="w-4 h-4" />, label: "8 plazas máx." },
+                { icon: <IconPrice className="w-4 h-4" />, label: "600€ / persona" },
+                { icon: <IconCalendar className="w-4 h-4" />, label: "Fin de semana" },
               ].map(({ icon, label }) => (
-                <div key={label} className="flex items-center gap-2">
-                  <span className="text-base">{icon}</span>
+                <div key={label} className="flex items-center gap-2 text-crema/70">
+                  {icon}
                   <span className="font-sans text-crema/80 text-sm">{label}</span>
                 </div>
               ))}

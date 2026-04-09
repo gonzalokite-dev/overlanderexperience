@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import AnimateIn from "@/components/ui/AnimateIn";
+import { IconPin, IconUsers, IconCalendar, IconLeaf, IconCheck, IconX, IconStar } from "@/components/ui/Icons";
 import { IMAGES, WHATSAPP_NUMBER } from "@/lib/data";
 
 const GALLERY = [
@@ -159,8 +160,8 @@ export default function ExperienciaVivir() {
               <div className="grid sm:grid-cols-2 gap-3 mb-12">
                 {INCLUYE.map(({ ok, text }, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className={`mt-0.5 text-sm font-bold ${ok ? "text-musgo" : "text-piedra"}`}>
-                      {ok ? "✓" : "✗"}
+                    <span className={`mt-0.5 shrink-0 ${ok ? "text-musgo" : "text-piedra/50"}`}>
+                      {ok ? <IconCheck className="w-4 h-4" /> : <IconX className="w-4 h-4" />}
                     </span>
                     <span className={`font-sans text-sm ${ok ? "text-tierra dark:text-crema" : "text-piedra dark:text-crema/40"}`}>
                       {text}
@@ -238,8 +239,9 @@ export default function ExperienciaVivir() {
               <AnimateIn direction="right">
                 <div className="border border-musgo/20 dark:border-crema/10 bg-crema dark:bg-negro shadow-xl">
                   {/* Badge */}
-                  <div className="bg-fuego text-crema text-xs font-sans font-bold uppercase tracking-widest px-4 py-2 text-center">
-                    ✦ Experiencia Estrella
+                  <div className="bg-fuego text-crema text-xs font-sans font-bold uppercase tracking-widest px-4 py-2 text-center flex items-center justify-center gap-1.5">
+                    <IconStar className="w-2.5 h-2.5" />
+                    Experiencia Estrella
                   </div>
 
                   <div className="p-6">
@@ -250,15 +252,15 @@ export default function ExperienciaVivir() {
                     </p>
 
                     {/* Info */}
-                    <div className="space-y-2 mb-5 text-sm">
+                    <div className="space-y-2.5 mb-5 text-sm">
                       {[
-                        ["📍", "Somiedo, Asturias"],
-                        ["👥", "Máx. 8 personas"],
-                        ["🗓️", "Viernes a domingo"],
-                        ["🌿", "Grupos reducidos"],
-                      ].map(([icon, text]) => (
-                        <div key={text} className="flex gap-2 items-center font-sans text-piedra dark:text-crema/60">
-                          <span>{icon}</span>
+                        { icon: <IconPin className="w-4 h-4" />, text: "Somiedo, Asturias" },
+                        { icon: <IconUsers className="w-4 h-4" />, text: "Máx. 8 personas" },
+                        { icon: <IconCalendar className="w-4 h-4" />, text: "Viernes a domingo" },
+                        { icon: <IconLeaf className="w-4 h-4" />, text: "Grupos reducidos" },
+                      ].map(({ icon, text }) => (
+                        <div key={text} className="flex gap-2.5 items-center font-sans text-piedra dark:text-crema/60">
+                          <span className="shrink-0 text-musgo dark:text-crema/40">{icon}</span>
                           <span>{text}</span>
                         </div>
                       ))}

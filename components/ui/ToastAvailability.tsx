@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { IconArrowRight } from "@/components/ui/Icons";
 
 export default function ToastAvailability() {
   const [visible, setVisible] = useState(false);
@@ -40,7 +41,7 @@ export default function ToastAvailability() {
               onClick={() => setVisible(false)}
               className="text-xs text-crema/60 hover:text-fuego transition-colors underline underline-offset-2"
             >
-              Ver fechas disponibles →
+              <span className="inline-flex items-center gap-1">Ver fechas disponibles <IconArrowRight className="w-3 h-3" /></span>
             </Link>
           </div>
           <button

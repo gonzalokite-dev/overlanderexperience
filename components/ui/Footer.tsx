@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IconExternalLink } from "@/components/ui/Icons";
 import { EMAIL, WHATSAPP_NUMBER, INSTAGRAM } from "@/lib/data";
 
 function MountainIcon() {
@@ -98,7 +99,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-crema/60 hover:text-green-400 transition-colors flex items-center gap-2"
                 >
-                  <span className="w-4 h-4 text-green-400">↗</span>
+                  <IconExternalLink className="w-3.5 h-3.5 text-green-400" />
                   WhatsApp directo
                 </a>
               </li>

@@ -1,4 +1,5 @@
 import AnimateIn from "@/components/ui/AnimateIn";
+import { IconArrowRight } from "@/components/ui/Icons";
 
 const CONCEPTOS = [
   {
@@ -74,7 +75,7 @@ export default function FilosofiaPreview() {
               href="/filosofia"
               className="font-serif italic text-musgo dark:text-crema/60 text-lg hover:text-fuego dark:hover:text-fuego transition-colors"
             >
-              Leer nuestro manifiesto →
+              <span className="inline-flex items-center gap-2">Leer nuestro manifiesto <IconArrowRight className="w-4 h-4" /></span>
             </a>
           </div>
         </AnimateIn>

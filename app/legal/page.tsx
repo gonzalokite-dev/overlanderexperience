@@ -1,4 +1,5 @@
 import AnimateIn from "@/components/ui/AnimateIn";
+import { IconArrowRight } from "@/components/ui/Icons";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -82,8 +83,8 @@ export default function LegalPage() {
               <ul className="space-y-2">
                 {SECTIONS.map(s => (
                   <li key={s.id}>
-                    <a href={`#${s.id}`} className="font-sans text-sm text-musgo dark:text-crema/70 hover:text-fuego transition-colors">
-                      → {s.titulo}
+                    <a href={`#${s.id}`} className="font-sans text-sm text-musgo dark:text-crema/70 hover:text-fuego transition-colors inline-flex items-center gap-2">
+                      <IconArrowRight className="w-3.5 h-3.5" /> {s.titulo}
                     </a>
                   </li>
                 ))}
