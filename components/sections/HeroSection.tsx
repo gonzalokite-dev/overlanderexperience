@@ -49,7 +49,7 @@ export default function HeroSection() {
           transition={{ duration: 0.9, delay: 0.4 }}
           className="font-serif text-6xl md:text-8xl lg:text-9xl text-crema font-light leading-none mb-4"
         >
-          Vivir la braña.
+          Vive la braña.
         </motion.h1>
 
         <motion.h2

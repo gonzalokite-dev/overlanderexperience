@@ -9,7 +9,7 @@ export const IMAGES = {
   desayuno: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200",
   naturaleza: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600",
   grupo: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600",
-  amanecer: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600",
+  amanecer: "/images/hero-brana.jpg",
   cabana: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600",
   lago: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=1600",
 };
