@@ -3,8 +3,8 @@ import ExperienciaVivir from "@/components/sections/ExperienciaVivir";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiencias en naturaleza auténtica · Somiedo, Asturias",
-  description: "Vivir la Braña: experiencia de fin de semana en el corazón de Somiedo. Máximo 8 personas. 600€ por persona. Plazas limitadas.",
+  title: "Experiencias de bienestar en naturaleza · Somiedo, Asturias",
+  description: "Vivir la Braña: fin de semana de bienestar en la braña de La Pornacal, Somiedo. Grupos reducidos de máximo 8 personas. Viernes a domingo. 600€ por persona.",
 };
 
 export default function ExperienciasPage() {

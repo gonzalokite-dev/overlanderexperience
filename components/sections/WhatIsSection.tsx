@@ -8,12 +8,12 @@ const PILLARS = [
   {
     icon: (
       <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" />
-        <path d="M12 6v6l4 2" strokeLinecap="round" />
+        <path d="M12 2C6 2 2 7 2 12s4 10 10 10 10-5 10-10S18 2 12 2z" />
+        <path d="M12 8v5l3 3" strokeLinecap="round" />
       </svg>
     ),
-    title: "Naturaleza sin artificios",
-    text: "Sin decorados. Sin filtros. Solo tierra, piedra y el sonido del viento en la braña.",
+    title: "Experiencia, no excursión",
+    text: "No vendrás a ver cosas. Vendrás a sentir cosas. Hay una diferencia enorme entre mirar un paisaje y dejar que ese paisaje te cambie algo por dentro.",
   },
   {
     icon: (
@@ -24,16 +24,17 @@ const PILLARS = [
       </svg>
     ),
     title: "Grupos de máximo 8 personas",
-    text: "Siempre. Las conversaciones reales no pasan en grupos de treinta.",
+    text: "Siempre. Las conversaciones reales no pasan en grupos de treinta. El silencio colectivo solo es posible cuando el grupo es pequeño.",
   },
   {
     icon: (
       <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" strokeLinejoin="round" />
+        <path d="M12 22c0 0-8-5-8-12a8 8 0 0116 0c0 7-8 12-8 12z" />
+        <circle cx="12" cy="10" r="2" />
       </svg>
     ),
-    title: "Experiencias que no se olvidan",
-    text: "Diseñadas para que algo en ti se asiente. No aventura de catálogo.",
+    title: "Te llevas algo real a casa",
+    text: "Respirarás diferente. Te moverás sin tensión. Dormirás mejor. Y cuando vuelvas a tu vida, algo habrá cambiado. No sabrás exactamente qué. Pero lo notarás.",
   },
 ];
 
@@ -46,19 +47,20 @@ export default function WhatIsSection() {
           <div>
             <AnimateIn>
               <p className="text-fuego font-sans text-xs font-semibold uppercase tracking-[0.3em] mb-4">
-                Sobre nosotros
+                Qué es esto
               </p>
             </AnimateIn>
             <AnimateIn delay={0.1}>
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-tierra dark:text-crema font-light leading-tight mb-6">
-                No somos un hotel.
+                No somos turismo.
                 <br />
-                <em>No somos una excursión.</em>
+                <em>Somos otra forma de vivir.</em>
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.2}>
               <p className="font-sans text-piedra dark:text-crema/60 text-lg leading-relaxed mb-10">
-                Somos algo diferente. North Authentic Experience nació de la obsesión por preservar algo que se está perdiendo: la autenticidad de la braña, el silencio que se siente en la montaña, la sencillez de lo esencial.
+                Vivimos demasiado rápido. Hemos normalizado el estrés. Nos hemos desconectado de lo esencial.
+                North Authentic Experience nació para cambiar eso: un fin de semana en la naturaleza donde algo en ti se asienta.
               </p>
             </AnimateIn>
 
@@ -88,17 +90,18 @@ export default function WhatIsSection() {
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
                   src={IMAGES.naturaleza}
-                  alt="Naturaleza auténtica en Asturias"
+                  alt="Naturaleza auténtica en Somiedo, Asturias"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               {/* Overlap card */}
-              <div className="absolute -bottom-6 -left-6 bg-tierra text-crema p-6 max-w-[200px] shadow-2xl">
+              <div className="absolute -bottom-6 -left-6 bg-tierra text-crema p-6 max-w-[220px] shadow-2xl">
                 <p className="font-serif text-3xl font-light mb-1">8</p>
                 <p className="font-sans text-xs uppercase tracking-widest text-crema/70">plazas máximo</p>
                 <div className="w-8 h-px bg-fuego mt-3" />
+                <p className="font-sans text-xs text-crema/50 mt-2">Siempre. Sin excepciones.</p>
               </div>
             </div>
           </AnimateIn>

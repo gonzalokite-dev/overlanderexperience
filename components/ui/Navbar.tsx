@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/alojamientos", label: "Alojamientos" },
   { href: "/filosofia", label: "Filosofía" },
   { href: "/sobre-nosotros", label: "Nosotros" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 function MountainIcon() {

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AnimateIn from "@/components/ui/AnimateIn";
-import { IconPin, IconUsers, IconPrice, IconCalendar, IconStar } from "@/components/ui/Icons";
+import { IconPin, IconUsers, IconPrice, IconCalendar } from "@/components/ui/Icons";
 import { IMAGES } from "@/lib/data";
 
 export default function ExperienciaDestacada() {
@@ -19,35 +19,41 @@ export default function ExperienciaDestacada() {
       <motion.div className="absolute inset-0 scale-110" style={{ y }}>
         <Image
           src={IMAGES.brana}
-          alt="Vivir la Braña - Experiencia en Somiedo"
+          alt="Vive la Braña - Experiencia de bienestar en Somiedo"
           fill
           className="object-cover object-center"
           sizes="100vw"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-r from-negro/80 via-negro/50 to-negro/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-negro/85 via-negro/50 to-negro/20" />
 
-      {/* Badge animado */}
+      {/* Badge */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 z-10">
         <motion.div
           className="bg-fuego text-crema font-sans text-xs font-bold uppercase tracking-[0.3em] px-5 py-2"
           animate={{ scale: [1, 1.03, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <IconStar className="w-2.5 h-2.5 inline mr-1.5 -mt-px" />Experiencia Estrella
+          Experiencia principal
         </motion.div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
         <div className="max-w-xl">
           <AnimateIn>
+            <p className="font-sans text-xs text-fuego font-semibold uppercase tracking-[0.3em] mb-4">
+              Fin de semana en la braña
+            </p>
+          </AnimateIn>
+          <AnimateIn delay={0.05}>
             <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-crema font-light leading-none mb-6">
               Vivir la Braña
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.1}>
             <p className="font-sans text-crema/80 text-lg leading-relaxed mb-8">
-              Un fin de semana en el corazón de Somiedo. Donde el fuego del teito es la única pantalla que necesitas. Desconecta, respira, vuelve.
+              Tres días en el corazón de Somiedo. Bienestar, movimiento, calma y fuego.
+              Vendrás agotado. Te irás sabiendo respirar.
             </p>
           </AnimateIn>
 
@@ -55,10 +61,10 @@ export default function ExperienciaDestacada() {
           <AnimateIn delay={0.2}>
             <div className="flex flex-wrap gap-6 mb-10">
               {[
-                { icon: <IconPin className="w-4 h-4" />, label: "Somiedo, Asturias" },
+                { icon: <IconPin className="w-4 h-4" />, label: "La Pornacal, Somiedo" },
                 { icon: <IconUsers className="w-4 h-4" />, label: "8 plazas máx." },
                 { icon: <IconPrice className="w-4 h-4" />, label: "600€ / persona" },
-                { icon: <IconCalendar className="w-4 h-4" />, label: "Fin de semana" },
+                { icon: <IconCalendar className="w-4 h-4" />, label: "Viernes a domingo" },
               ].map(({ icon, label }) => (
                 <div key={label} className="flex items-center gap-2 text-crema/70">
                   {icon}
@@ -73,7 +79,7 @@ export default function ExperienciaDestacada() {
               href="/experiencias"
               className="inline-block bg-fuego text-crema font-sans font-medium text-sm uppercase tracking-widest px-8 py-4 hover:bg-crema hover:text-tierra transition-all duration-300"
             >
-              Ver experiencia completa
+              Ver la experiencia completa
             </Link>
           </AnimateIn>
         </div>

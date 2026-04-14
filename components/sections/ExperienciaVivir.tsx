@@ -13,34 +13,52 @@ import { IMAGES, WHATSAPP_NUMBER } from "@/lib/data";
 const GALLERY = [
   { src: IMAGES.brana, alt: "Teito en la braña de Somiedo" },
   { src: IMAGES.fuego, alt: "Fuego en el teito" },
-  { src: IMAGES.desayuno, alt: "Desayuno tradicional asturiano" },
-  { src: IMAGES.grupo, alt: "Grupo en la braña" },
+  { src: IMAGES.desayuno, alt: "Desayuno en la braña" },
+  { src: IMAGES.grupo, alt: "Grupo en la naturaleza" },
 ];
 
 const PROGRAMA = [
   {
-    dia: "Viernes tarde",
+    dia: "Viernes",
     titulo: "Llegada y bienvenida",
-    desc: "Llegada al punto de encuentro. Presentación del grupo. Cena de bienvenida en el teito con productos locales de temporada. Primera noche bajo las estrellas de Somiedo.",
+    momentos: [
+      { hora: "17:00", texto: "Llegada al punto de encuentro en Villar de Vildas. Presentación del grupo." },
+      { hora: "18:30", texto: "Paseo de apertura por el entorno de la aldea. Primer contacto con el paisaje." },
+      { hora: "21:00", texto: "Cena de bienvenida con productos locales de temporada." },
+      { hora: "23:00", texto: "Primera noche. Cielo sin contaminación lumínica. Silencio real." },
+    ],
   },
   {
     dia: "Sábado",
-    titulo: "El día completo en la braña",
-    desc: "Desayuno tradicional asturiano. Ruta guiada por la braña de Somiedo con el guía experiencial. Tiempo libre para explorar. Actividad de bienestar: meditación o respiración en la montaña. Cena bajo las estrellas.",
+    titulo: "El día en la braña",
+    momentos: [
+      { hora: "08:00", texto: "Despertar tranquilo. Práctica de respiración matinal en exterior." },
+      { hora: "09:00", texto: "Desayuno asturiano. Sin prisa." },
+      { hora: "10:30", texto: "Subida caminando a la braña de La Pornacal. El camino es parte de la experiencia." },
+      { hora: "13:00", texto: "Desayuno tardío en la braña. Pausa larga. Tiempo de calma." },
+      { hora: "15:30", texto: "Práctica de bienestar: movimiento consciente y respiración en altura." },
+      { hora: "17:30", texto: "Paseo libre por los teitos. Tiempo para uno mismo." },
+      { hora: "20:00", texto: "Bajada. Cena. Fuego de cierre." },
+    ],
   },
   {
     dia: "Domingo",
-    titulo: "Cierre y regreso",
-    desc: "Desayuno tranquilo sin prisa. Círculo de cierre en grupo. Tiempo para la reflexión. Regreso con algo diferente dentro.",
+    titulo: "Cierre y vuelta",
+    momentos: [
+      { hora: "08:30", texto: "Despertar sin alarma. Último desayuno." },
+      { hora: "10:00", texto: "Práctica final. Círculo de cierre en grupo." },
+      { hora: "11:30", texto: "Paseo corto. Tiempo para integrar lo vivido." },
+      { hora: "13:00", texto: "Despedida. Vuelta a casa con algo distinto dentro." },
+    ],
   },
 ];
 
 const INCLUYE = [
   { ok: true, text: "Alojamiento viernes y sábado noche" },
   { ok: true, text: "Cena de bienvenida viernes" },
-  { ok: true, text: "Desayuno sábado y domingo" },
-  { ok: true, text: "Guía experiencial todo el fin de semana" },
-  { ok: true, text: "Actividad de bienestar incluida" },
+  { ok: true, text: "Todos los desayunos" },
+  { ok: true, text: "Acompañamiento todo el fin de semana" },
+  { ok: true, text: "Prácticas de bienestar incluidas" },
   { ok: true, text: "Materiales para la experiencia" },
   { ok: false, text: "Transporte hasta el punto de encuentro" },
   { ok: false, text: "Bebidas adicionales" },
@@ -50,24 +68,28 @@ const INCLUYE = [
 
 const FAQS = [
   {
-    q: "¿Hay baño en el teito?",
-    a: "Hay instalaciones rústicas adaptadas. La experiencia es auténtica, no un hotel. Pero no te faltará lo esencial.",
+    q: "¿Esto es un retiro de yoga?",
+    a: "No. No hay clases de yoga ni etiquetas terapéuticas. Es una experiencia de bienestar en naturaleza con prácticas sencillas de movimiento y respiración. Sin dogmas. Sin uniformes.",
   },
   {
-    q: "¿Qué nivel físico se necesita?",
-    a: "Buena forma física básica. La ruta es moderada, accesible para la mayoría de personas activas. No es alpinismo.",
+    q: "¿Hay que estar en forma?",
+    a: "No hace falta ser deportista. La subida a la braña es caminando, a ritmo tranquilo. Si puedes caminar una hora, puedes hacer esta experiencia.",
   },
   {
     q: "¿Qué debo llevar?",
-    a: "Ropa de montaña por capas, botas de trekking, saco de dormir (o lo indicaremos en la info de confirmación), ganas de desconectar.",
+    a: "Ropa cómoda por capas, calzado de montaña, un saco de dormir si lo tienes. En la confirmación te mandamos la lista completa. Nada complicado.",
   },
   {
-    q: "¿Es cómodo?",
-    a: "Es auténtico. Ni glamping ni hotel de cinco estrellas. Pero dormirás como no recuerdas haber dormido en años.",
+    q: "¿Puedo ir solo?",
+    a: "Sí, y es una de las experiencias más recomendadas para ir solo. El grupo pequeño facilita conexiones reales. Muchos repiten precisamente por eso.",
+  },
+  {
+    q: "¿Qué pasa si llueve?",
+    a: "Continuamos. La lluvia en la braña es parte de la experiencia. El teito aguanta. Tú también. Si hay condiciones de seguridad comprometidas, avisamos con antelación.",
   },
   {
     q: "¿Puedo cancelar?",
-    a: "Sí, con condiciones. Más de 30 días: devolución 100%. Entre 15-30 días: 50%. Menos de 15 días: sin devolución. Consulta condiciones completas.",
+    a: "Sí. Más de 30 días antes: devolución completa. Entre 15 y 30 días: 50%. Menos de 15 días: sin devolución. Consulta las condiciones completas.",
   },
 ];
 
@@ -113,7 +135,7 @@ export default function ExperienciaVivir() {
                 La experiencia
               </h2>
               <blockquote className="font-serif italic text-xl text-piedra dark:text-crema/70 leading-relaxed border-l-2 border-fuego pl-6 mb-8">
-                "Hay lugares donde el tiempo se detiene. Donde el fuego del teito es la única pantalla que necesitas. Vivir la Braña es una experiencia de fin de semana en el corazón de Somiedo, donde los vaqueiros de alzada llevaban su ganado cada verano. Tú harás lo mismo: desconectar, respirar, volver."
+                "Hay lugares donde el tiempo se detiene. La braña de La Pornacal es uno de los conjuntos de arquitectura popular mejor conservados de Europa. Un fin de semana aquí no es turismo. Es reconectar con algo que llevamos dentro y que hemos dejado de escuchar."
               </blockquote>
             </AnimateIn>
 
@@ -127,7 +149,7 @@ export default function ExperienciaVivir() {
                   <button
                     key={i}
                     onClick={() => setActiveTab(i)}
-                    className={`font-sans text-sm px-4 py-3 border-b-2 transition-all -mb-px ${
+                    className={`font-sans text-sm px-5 py-3 border-b-2 transition-all -mb-px ${
                       activeTab === i
                         ? "border-fuego text-fuego"
                         : "border-transparent text-piedra dark:text-crema/50 hover:text-tierra dark:hover:text-crema"
@@ -146,8 +168,19 @@ export default function ExperienciaVivir() {
                   transition={{ duration: 0.3 }}
                   className="border border-t-0 border-musgo/10 dark:border-crema/10 p-6 mb-12"
                 >
-                  <h4 className="font-sans font-semibold text-tierra dark:text-crema mb-2">{PROGRAMA[activeTab].titulo}</h4>
-                  <p className="font-sans text-piedra dark:text-crema/60 text-sm leading-relaxed">{PROGRAMA[activeTab].desc}</p>
+                  <h4 className="font-sans font-semibold text-tierra dark:text-crema mb-5">
+                    {PROGRAMA[activeTab].titulo}
+                  </h4>
+                  <div className="space-y-4">
+                    {PROGRAMA[activeTab].momentos.map((m, i) => (
+                      <div key={i} className="flex gap-4 items-start">
+                        <span className="font-sans text-xs text-fuego font-semibold uppercase tracking-wider shrink-0 pt-0.5 w-14">
+                          {m.hora}
+                        </span>
+                        <p className="font-sans text-piedra dark:text-crema/60 text-sm leading-relaxed">{m.texto}</p>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </AnimateIn>
@@ -186,7 +219,7 @@ export default function ExperienciaVivir() {
                       <span className="font-sans font-medium text-tierra dark:text-crema text-sm">{faq.q}</span>
                       <motion.span
                         animate={{ rotate: openFaq === i ? 45 : 0 }}
-                        className="text-piedra dark:text-crema/40 ml-4 shrink-0"
+                        className="text-piedra dark:text-crema/40 ml-4 shrink-0 text-xl leading-none"
                       >
                         +
                       </motion.span>
@@ -200,7 +233,7 @@ export default function ExperienciaVivir() {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className="px-5 pb-4 font-sans text-sm text-piedra dark:text-crema/60 leading-relaxed">{faq.a}</p>
+                          <p className="px-5 pb-5 font-sans text-sm text-piedra dark:text-crema/60 leading-relaxed">{faq.a}</p>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -217,7 +250,7 @@ export default function ExperienciaVivir() {
                 </h4>
                 <ul className="space-y-2">
                   <li className="font-sans text-xs text-piedra dark:text-crema/50 leading-relaxed">
-                    • Esta es una experiencia en entorno natural, no un alojamiento turístico reglado.
+                    • Esta es una experiencia en entorno natural auténtico, no un alojamiento turístico reglado.
                   </li>
                   <li className="font-sans text-xs text-piedra dark:text-crema/50 leading-relaxed">
                     • El participante acepta las condiciones del entorno y asume responsabilidad sobre su preparación física.
@@ -226,7 +259,7 @@ export default function ExperienciaVivir() {
                     • North Authentic Experience no se responsabiliza de accidentes por negligencia del participante.
                   </li>
                   <li className="font-sans text-xs text-piedra dark:text-crema/50 leading-relaxed">
-                    • Se recomienda disponer de seguro de viaje/accidentes.
+                    • Se recomienda disponer de seguro de viaje y accidentes.
                   </li>
                 </ul>
               </div>
@@ -241,7 +274,7 @@ export default function ExperienciaVivir() {
                   {/* Badge */}
                   <div className="bg-fuego text-crema text-xs font-sans font-bold uppercase tracking-widest px-4 py-2 text-center flex items-center justify-center gap-1.5">
                     <IconStar className="w-2.5 h-2.5" />
-                    Experiencia Estrella
+                    Experiencia principal
                   </div>
 
                   <div className="p-6">
@@ -254,10 +287,10 @@ export default function ExperienciaVivir() {
                     {/* Info */}
                     <div className="space-y-2.5 mb-5 text-sm">
                       {[
-                        { icon: <IconPin className="w-4 h-4" />, text: "Somiedo, Asturias" },
+                        { icon: <IconPin className="w-4 h-4" />, text: "La Pornacal, Somiedo" },
                         { icon: <IconUsers className="w-4 h-4" />, text: "Máx. 8 personas" },
                         { icon: <IconCalendar className="w-4 h-4" />, text: "Viernes a domingo" },
-                        { icon: <IconLeaf className="w-4 h-4" />, text: "Grupos reducidos" },
+                        { icon: <IconLeaf className="w-4 h-4" />, text: "Bienestar en naturaleza" },
                       ].map(({ icon, text }) => (
                         <div key={text} className="flex gap-2.5 items-center font-sans text-piedra dark:text-crema/60">
                           <span className="shrink-0 text-musgo dark:text-crema/40">{icon}</span>
@@ -270,7 +303,7 @@ export default function ExperienciaVivir() {
                     <div className="mb-5">
                       <div className="flex justify-between text-xs font-sans mb-1">
                         <span className="text-tierra dark:text-crema font-medium">5 de 8 plazas libres</span>
-                        <span className="text-fuego font-medium">¡Quedan pocas!</span>
+                        <span className="text-fuego font-medium">Quedan pocas</span>
                       </div>
                       <div className="h-1.5 bg-musgo/10 dark:bg-crema/10 rounded-full overflow-hidden">
                         <div className="h-full bg-fuego rounded-full" style={{ width: "37.5%" }} />

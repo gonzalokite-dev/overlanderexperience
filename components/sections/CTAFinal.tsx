@@ -14,13 +14,14 @@ export default function CTAFinal() {
           </p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-8xl text-crema font-light leading-none mb-6">
-            Tu plaza te espera.
+          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-crema font-light leading-tight mb-6">
+            Vienes a desconectar.<br />
+            <em className="text-crema/70">Te vas sabiendo vivir mejor.</em>
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className="font-sans text-crema/60 text-lg mb-12 max-w-md mx-auto">
-            Plazas limitadas. Próximas fechas disponibles. Grupos reducidos. Siempre.
+            Grupos reducidos. Próximas fechas disponibles. Plazas que se agotan.
           </p>
         </AnimateIn>
         <AnimateIn delay={0.3}>
@@ -29,13 +30,13 @@ export default function CTAFinal() {
               href="/calendario"
               className="bg-fuego text-crema font-sans font-medium text-sm uppercase tracking-widest px-10 py-5 hover:bg-crema hover:text-tierra transition-all duration-300 text-base"
             >
-              Reservar ahora
+              Reservar mi plaza
             </Link>
             <Link
               href="/experiencias"
               className="border border-crema/30 text-crema font-sans font-medium text-sm uppercase tracking-widest px-10 py-5 hover:bg-crema/10 transition-all duration-300"
             >
-              Ver experiencias
+              Ver la experiencia
             </Link>
           </div>
         </AnimateIn>

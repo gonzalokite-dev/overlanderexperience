@@ -40,7 +40,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-crema/80 text-xs font-sans font-medium uppercase tracking-[0.3em] mb-6"
         >
-          Asturias · Somiedo · Experiencias únicas
+          Somiedo · Asturias · Grupos reducidos
         </motion.p>
 
         <motion.h1
@@ -58,7 +58,7 @@ export default function HeroSection() {
           transition={{ duration: 0.9, delay: 0.6 }}
           className="font-serif text-2xl md:text-3xl lg:text-4xl text-crema/80 font-light italic mb-8"
         >
-          Reconectar con lo esencial.
+          Vuelve a lo esencial.
         </motion.h2>
 
         <motion.p
@@ -67,7 +67,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="font-sans text-crema/70 text-base md:text-lg mb-10 max-w-md mx-auto"
         >
-          Experiencias en naturaleza auténtica. Grupos reducidos. Plazas limitadas.
+          Una experiencia de bienestar en una braña tradicional asturiana, donde la vida sigue el ritmo de la naturaleza.
         </motion.p>
 
         <motion.div
@@ -80,14 +80,14 @@ export default function HeroSection() {
             href="/experiencias"
             className="bg-fuego text-crema font-sans font-medium text-sm uppercase tracking-widest px-8 py-4 hover:bg-crema hover:text-tierra transition-all duration-300"
           >
-            Ver experiencias
+            Descubrir la experiencia
           </Link>
-          <a
-            href="#que-es"
+          <Link
+            href="/alojamientos"
             className="border border-crema/50 text-crema font-sans font-medium text-sm uppercase tracking-widest px-8 py-4 hover:bg-crema/10 transition-all duration-300"
           >
-            ¿Qué es esto?
-          </a>
+            Ver alojamientos
+          </Link>
         </motion.div>
       </motion.div>
 

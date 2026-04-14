@@ -1,37 +1,36 @@
 import AnimateIn from "@/components/ui/AnimateIn";
 import { IconArrowRight } from "@/components/ui/Icons";
 
-const CONCEPTOS = [
+const CREENCIAS = [
   {
     num: "01",
-    title: "Desconexión real",
-    text: "Sin wifi, sin ruido, sin prisa. No hablamos de apagar el móvil 5 minutos.",
+    title: "El estrés no es inevitable",
+    text: "Hemos aceptado que vivir acelerado es lo normal. No lo es. Y un fin de semana en la naturaleza puede recordártelo.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-        <path d="M18.364 5.636l-1.414 1.414M5.636 18.364l-1.414 1.414M5.636 5.636l1.414 1.414M18.364 18.364l1.414 1.414" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="4" />
-        <path d="M1 1l22 22" strokeLinecap="round" />
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     num: "02",
-    title: "Calma que se siente",
-    text: "Naturaleza que habla. Silencio que no incomoda. Aire que sabe distinto.",
+    title: "La calma se aprende",
+    text: "Respirar bien. Moverse sin tensión. Bajar el ritmo. Son habilidades, no lujos. Y se pueden practicar.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-        <path d="M3 12h18M3 6h18M3 18h18" strokeLinecap="round" />
+        <path d="M12 22c0 0-8-6-8-12a8 8 0 0116 0c0 6-8 12-8 12z" />
+        <path d="M12 10v4M12 10c0-2 2-3 2-3" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     num: "03",
-    title: "Volver a lo esencial",
-    text: "Fuego, conversación, tierra. Lo que éramos antes de que todo se acelerase.",
+    title: "La naturaleza es la herramienta",
+    text: "No necesitas un spa. Necesitas silencio real, aire limpio, un fuego y tiempo sin agenda. Lo demás viene solo.",
     icon: (
       <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-        <path d="M12 2c0 0-6 6-6 12a6 6 0 0012 0c0-6-6-12-6-12z" />
-        <path d="M12 12c0 0-2 2-2 4a2 2 0 004 0c0-2-2-4-2-4z" fill="currentColor" fillOpacity="0.3" />
+        <path d="M17 8C8 10 5.9 16.17 3.82 19.99M6.37 4.57A8 8 0 0118.48 17.3" strokeLinecap="round" />
+        <path d="M12 2L9 9l-7 1 5 5-1 7 6-3.5L18 22l-1-7 5-5-7-1z" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -39,25 +38,31 @@ const CONCEPTOS = [
 
 export default function FilosofiaPreview() {
   return (
-    <section className="py-24 lg:py-32 bg-crema dark:bg-negro">
+    <section className="py-24 lg:py-32 bg-niebla dark:bg-negro/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <AnimateIn>
             <p className="text-fuego font-sans text-xs font-semibold uppercase tracking-[0.3em] mb-4">
-              Nuestra filosofía
+              En qué creemos
             </p>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-tierra dark:text-crema font-light leading-tight">
-              Desconecta de verdad.
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-tierra dark:text-crema font-light leading-tight max-w-2xl mx-auto">
+              Hay otra forma<br />
+              <em>de vivir el tiempo.</em>
             </h2>
+          </AnimateIn>
+          <AnimateIn delay={0.2}>
+            <p className="font-sans text-piedra dark:text-crema/50 text-base mt-6 max-w-md mx-auto leading-relaxed">
+              No es filosofía. Es algo que se siente. Y una vez que lo sientes, es difícil volver a vivir igual.
+            </p>
           </AnimateIn>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {CONCEPTOS.map((c, i) => (
+          {CREENCIAS.map((c, i) => (
             <AnimateIn key={c.num} delay={i * 0.15}>
-              <div className="group text-center p-8 border border-musgo/10 dark:border-crema/10 hover:border-musgo dark:hover:border-crema/30 transition-all duration-500 hover:bg-musgo/5 dark:hover:bg-crema/5">
+              <div className="group text-center p-8 border border-musgo/10 dark:border-crema/10 hover:border-musgo dark:hover:border-crema/30 transition-all duration-500 hover:bg-white/60 dark:hover:bg-crema/5 bg-crema/60 dark:bg-transparent">
                 <div className="flex justify-center text-musgo dark:text-crema/60 mb-6 group-hover:text-fuego transition-colors duration-300">
                   {c.icon}
                 </div>
